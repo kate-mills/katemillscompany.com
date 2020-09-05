@@ -6,7 +6,6 @@ const NewsLetter = () => {
       <section className="newsletter-page">
         <div className="page-center">
           <h2>Get more information on our services to your inbox</h2>
-          <h4></h4>
           <form 
             action="/success"
             data-netlify="true"

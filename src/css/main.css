@@ -145,7 +145,7 @@ p {
   /*border-radius: var(--radius);*/
 }
 input, button, .btn {
-  border-radius: 15px;
+  border-radius: var(--radius);
 }
 .btn:hover {
   color: var(--clr-primary-1);
