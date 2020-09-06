@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 const query = graphql`
   {
-    allInstaNode(limit:6) {
+    allInstaNode(limit: 6) {
       nodes {
         localFile {
           childImageSharp {
@@ -21,16 +21,16 @@ const query = graphql`
   }
 `
 const Instagram = () => {
-  const {allInstaNode:{nodes}} = useStaticQuery(query)
+  const {
+    allInstaNode: { nodes },
+  } = useStaticQuery(query)
   return (
     <Wrapper>
-      <Title title="instagram"/>
+      <Title title="instagram" />
       <div className="images">
-        {
-          nodes.map((img, id)=>{
-            return <Image key={id} fluid={img.localFile.childImageSharp.fluid}/>
-          })
-        }
+        {nodes.map((img, id) => {
+          return <Image key={id} fluid={img.localFile.childImageSharp.fluid} />
+        })}
       </div>
     </Wrapper>
   )

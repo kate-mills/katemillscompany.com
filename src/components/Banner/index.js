@@ -7,10 +7,10 @@ import BannerCategories from './BannerCategories'
 const Banner = () => {
   return (
     <Wrapper>
-      <About/>
-      <Instagram/>
-      <Recent/>
-      <BannerCategories/>
+      <About />
+      <Instagram />
+      <Recent />
+      <BannerCategories />
     </Wrapper>
   )
 }
