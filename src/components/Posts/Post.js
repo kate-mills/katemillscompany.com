@@ -5,11 +5,11 @@ import { IoMdArrowRoundForward } from 'react-icons/io'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-const Post = ({frontmatter, excerpt}) => {
-  const {title, image, slug, date, category, readTime} = frontmatter
-  return(
+const Post = ({ frontmatter, excerpt }) => {
+  const { title, image, slug, date, category, readTime } = frontmatter
+  return (
     <Wrapper>
-      <Image fluid={image.childImageSharp.fluid} className="img"/>
+      <Image fluid={image.childImageSharp.fluid} className="img" />
       <div className="info">
         <span className="category">{category}</span>
         <h3>{title}</h3>
@@ -23,9 +23,7 @@ const Post = ({frontmatter, excerpt}) => {
             <FaRegClock className="icon"></FaRegClock>
             {date}
           </span>
-          <span>
-            {readTime} min read
-          </span>
+          <span>{readTime} min read</span>
         </footer>
       </div>
     </Wrapper>

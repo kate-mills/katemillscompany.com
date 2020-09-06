@@ -6,7 +6,7 @@ const NewsLetter = () => {
       <section className="newsletter-page">
         <div className="page-center">
           <h2>Get more information on our services to your inbox</h2>
-          <form 
+          <form
             action="/success"
             data-netlify="true"
             method="post"
@@ -30,10 +30,9 @@ const NewsLetter = () => {
               className="form-control"
               required
             />
-            <button
-              type="submit"
-              className="btn form-control submit-btn"
-            >submit</button>
+            <button type="submit" className="btn form-control submit-btn">
+              submit
+            </button>
           </form>
         </div>
       </section>

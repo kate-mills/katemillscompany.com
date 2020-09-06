@@ -5,18 +5,20 @@ import { graphql } from 'gatsby'
 import Posts from '../components/Posts'
 // ...GatsbyImageSharpFluid
 const PostsPage = ({ data }) => {
-  const {allMdx:{nodes:posts}} = data
+  const {
+    allMdx: { nodes: posts },
+  } = data
   return (
     <Layout>
-      <Hero/>
-      <Posts posts={posts} title="All Posts"/>
+      <Hero />
+      <Posts posts={posts} title="All Posts" />
     </Layout>
   )
 }
 
 export const query = graphql`
   {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       totalCount
       nodes {
         excerpt
