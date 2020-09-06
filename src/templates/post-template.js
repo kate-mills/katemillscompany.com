@@ -9,7 +9,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 // ...GatsbyImageSharpFluid
 const PostTemplate = ({ data: { mdx } }) => {
   const { frontmatter: post, body } = mdx
-  console.log('body', body)
   return (
     <Layout>
       <Hero />

@@ -4,10 +4,29 @@ import Image from 'gatsby-image'
 import { graphql, useStaticQuery } from 'gatsby'
 import Title from './Title'
 import styled from 'styled-components'
-//...GatsbyImageSharpFixed
-
+const query = graphql`
+  {
+    file(relativePath: { eq: "banner-km.png" }) {
+      childImageSharp {
+        fixed(width: 100, height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
 const About = () => {
-  return <Wrapper>Banner About</Wrapper>
+  const data = useStaticQuery(query)
+  return (
+    <Wrapper>
+      <Title title="About Me" />
+      <Image fixed={data.file.childImageSharp.fixed} className="img" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eligendi.
+      </p>
+      <SocialLinks styleClass="banner-icons"></SocialLinks>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.div`
