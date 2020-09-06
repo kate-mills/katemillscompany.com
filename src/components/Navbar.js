@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { FaBars } from 'react-icons/fa'
 //import logo from '../assets/kmco-logo.svg'
-import logo from '../assets/kmco-logo.png'
+import logo from '../assets/kmco-blog.png'
 
 import Links from '../constants/links'
 import SocialLinks from '../constants/socialLinks'
