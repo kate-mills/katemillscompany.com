@@ -11,11 +11,13 @@ const Post = ({ frontmatter, excerpt }) => {
     <Wrapper>
       <Image fluid={image.childImageSharp.fluid} className="img" />
       <div className="info">
-        <Link to={`/${category}`} className="category">{category}</Link>
+        <Link to={`/${category}`} className="category">
+          {category}
+        </Link>
         <h3>{title}</h3>
         <div className="underline"></div>
         <p>{excerpt}</p>
-        <Link to={`/posts/$slug}`} className="link">
+        <Link to={`/posts/${slug}`} className="link">
           Continue Reading <IoMdArrowRoundForward />
         </Link>
         <footer>
