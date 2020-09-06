@@ -11,7 +11,7 @@ const Post = ({ frontmatter, excerpt }) => {
     <Wrapper>
       <Image fluid={image.childImageSharp.fluid} className="img" />
       <div className="info">
-        <span className="category">{category}</span>
+        <Link to={`/${category}`} className="category">{category}</Link>
         <h3>{title}</h3>
         <div className="underline"></div>
         <p>{excerpt}</p>
