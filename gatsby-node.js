@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      categories:allMdx {
+      categories: allMdx {
         distinct(field: frontmatter___category)
       }
     }
@@ -31,9 +31,9 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `/${category}`,
       component: path.resolve(`src/templates/category-template.js`),
-      context:{
+      context: {
         category,
-      }
+      },
     })
   })
 }
